@@ -1,0 +1,8 @@
+###
+// 주석 처리하고 해도 나옴 -> 포스트맨 바디 에서 값을 넣어서 { "tableName":    "test3"}
+POST http://localhost:3000/api/tables HTTP/1.1
+Content-Type: application/json
+
+{
+  "tableName":    "test3"
+}
