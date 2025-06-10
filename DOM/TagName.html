@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+    <script>
+        let ul =document.getElementsByTagName('ul')[0];
+        let lis = ul.getElementsByTagName('li');
+        for(let i=0; lis.length; i++){
+            lis[i].style.color = 'red';
+        } // 그냥 li만 지정할 경우 모든 li가 바뀜
+        // ul만 바꾸고 싶으면
+    </script>
+</body>
+</html>

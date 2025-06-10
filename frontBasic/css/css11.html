@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+  .grid {
+    display: grid;
+    grid-auto-rows: 200px;
+  }
+
+  .g1{
+    background-color: red;
+    grid-column: auto / span 6;
+  }
+  
+  .g2{
+    background-color: blue;
+    grid-row: 2/4;
+  }
+  
+  .g3{
+    background-color: green;
+    grid-column: 2/6;
+  }
+  
+  .g4{
+    background-color: aqua;
+    grid-row: auto / span 2;
+  }
+  
+  .g5{
+    background-color: yellow;
+    grid-column: 2/4
+  }
+  
+  .g6{
+    background-color: orange;
+    grid-column: 4/6;    
+  }
+  
+  .g7{
+    background-color: beige;
+    grid-column: auto / span 6;
+  }
+  
+
+</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid</title>
+</head>
+<body>
+  <div class="grid">
+  <div class="grid g1">1</div>
+  <div class="grid g2">2</div>
+  <div class="grid g3">3</div>
+  <div class="grid g4">4</div>
+  <div class="grid g5">5</div>
+  <div class="grid g6">6</div>
+  <div class="grid g7">7</div>
+</div>
+</body>
+</html>

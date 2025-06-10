@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    body{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+      
+    }
+    form{
+         border: 1px solid;
+         padding: 20px;
+         margin-bottom: 10px;
+         background-color: #ffffff;
+         border-radius: 10px;
+    }
+    label, select{
+        width: 174px
+    }
+
+    #agree{
+        position: relative;
+        right: -80px;
+    }
+    button{
+        width: 174px;
+        background-color: green;
+        color: white;
+        border-radius: 5px 5px 5px 5px;
+        box-shadow: 1px 1px 1px 1px;
+    }
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구글 폼 클론 - 사용자 설문지</title>
+</head>
+<body>
+    <h2>구글 폼 클론 - 사용자 설문지</h2>
+    <form>
+        <label for="username">
+            이름: <br> <input type="text" name="username" id="username" placeholder="이름을 입력하세요">
+        </label><br><br>
+
+         <label for="email">
+            이메일: <br> <input type="email" name="email" id="email" placeholder="exmaple@gmail.com">
+        </label><br><br>
+        
+         <label for="tel">
+            전화번호: <br> <input type="tel" name="tel" id="tel" placeholder="010-1234-5678">
+        </label><br><br>
+
+         <label for="gen">
+            성별: <br> <select name="gen" id="gen">
+               <option value="male">남자 </option>
+               <option value="female">야자 </option>
+               <option value="other">기타 </option>
+            </select>
+        </label><br><br>
+
+        <label for="agree">
+            이용 약관에 동의:
+            <br> <input type="checkbox" name="agree" id="agree">
+        </label><br><br>
+
+        <button id="submit" type="submit" required">
+            제출하기
+        </button><br><br>
+        <button id="add" type="button" required>
+            추가 질문 하기
+        </button>
+    </form>
+</body>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event){
+            event.preventDefault();
+            const name = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const tel = document.getElementById('tel').value;
+            const agree = document.getElementById('agree').checked;
+            if(!name && !email && !tel && !agree){
+                alert('모든 항목을 적어주세요');
+            }else{
+                alert(`${name}${email}${tel}${agree}`)
+            }
+        });
+    </script>
+</html>
+

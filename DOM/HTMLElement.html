@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>HT</li>
+        <li>CS</li>
+        <li id="list">JS</li>
+    </ul>
+    <input type="button" id="button" value="button" onclick="btn()">
+    <script>
+         let list = document.getElementById('list');
+         console.log(list.constructor.name); // HTMLElement
+
+         let button = document.getElementById('button');
+         function btn(){
+            if(prompt('id') === 'park'){
+                alert('yes');
+            }else{
+                alert('no');
+            }
+         }
+         console.log(button.constructor.name); //HTMLInputElement
+    </script>
+</body>
+</html>

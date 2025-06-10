@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body{
+      text-align: center;
+      border: 1px solid;
+      border-radius: 1px 1px 1px 1px;
+    }
+    h1{
+      font-family: bold;
+    }
+    p{
+      color: gray;
+    }
+    button{
+      background-color: green;
+      color:white;
+      margin-bottom: 10px;
+    }
+    button:hover{
+      background-color:blue;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1</title>
+</head>
+<body>
+   <div >
+    <h1>나의 첫 웹 페이지</h1>
+    <p id="message">버튼을 클릭해보세요!</p>
+    <button onclick="change()">클릭하기</button>
+  </div>
+  <script>
+    function change(){
+      message = document.getElementById('message');
+      message.innerHTML = 'change'
+    }
+  </script>
+</body>
+</html>

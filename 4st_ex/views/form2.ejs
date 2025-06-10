@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>form</title>
+</head>
+<body>
+  <h1> <%= title %></h1>
+
+
+
+    <form action="/getForm" name="submi" method="get"> <br>
+    이름: <input type="text"name="name" id="name"><br>
+      <fieldset name="gen" id="gen">
+      <legend >성별</legend>
+      <input type="radio" id="man">남자 <input type="radio" id="girl">여자<br>
+     </fieldset><br>
+
+      <fieldset>
+        <legend id="birth">생년월일</legend>
+     <select id="year">
+       <% for (let i= 1900; i<= new Date().getFullYear(); i++){ %>
+       <option value= <%= i%> ><%= i%></option>
+        <%}%>
+      </select>
+
+     <select id="month">
+       <% for (let i= 1; i<13; i++){ %>
+        <option value= <%= i%> ><%= i%></option>
+        <%}%>
+      </select>
+
+      <select id="day">
+       <% for (let i= 1; i<31; i++){ %>
+        <option value= <%= i%> ><%= i%></option>
+        <%}%>
+      </select>
+     </fieldset>
+     <br>
+     
+      <fieldset>
+        <legend id="int"> 관심사</legend>
+      <br> <input type="checkbox" name="" id="t">여행 
+      <input type="checkbox" name="" id="p">패션
+      <input type="checkbox" name="" id="d">음식 <br>
+     </fieldset><br>
+
+    <button type="submit">회원가입</button>
+      </form>
+
+
+</body>
+</html>

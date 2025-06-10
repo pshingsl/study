@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+    body{
+        border: 1px solid;
+        border-radius: 5px 5px 5px 5px;
+        box-shadow: 1px 1px 1px 1px;
+        text-align: center;
+    }
+    #name{
+        width: 150px;
+        height: 28px;
+        position: relative;
+        right: -14px
+    }
+     #button{
+        margin: 10px;
+        padding: 5px;
+        background-color: green;
+        color: white;
+         border-radius: 5px 5px 5px 5px;
+    }
+
+</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>웹 페이지 실습</title>
+</head>
+<body>
+  <div >
+    <h1>나의 첫 웹 페이지</h1>
+    <p id="test">이름을 입력하세요.</p>
+    <input type="text" name="name" id="name" placeholder="이름">
+    <button id="button" onclick="change()">클릭하기</button>
+ </div>
+
+    <script>
+       function change(){
+        const test = document.getElementById('test');
+        const name = document.getElementById('name').value;
+        
+        if(!name){
+            test.textContent = '이름을 입력해주세요!';    
+        }else{
+            test.textContent = `${name}님 환영합니다`;
+        }
+       }
+    </script>
+</body>
+</html>

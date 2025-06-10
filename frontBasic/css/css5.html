@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container{
+            width: 500px;
+            height: 500px;
+            background-color: aliceblue;
+            position: relative;
+        }
+        .container div{
+            width: 100px;
+            height: 100px;
+        }
+        .item1{
+            position: relative;
+            left: 50px;
+            top: 30px; 
+            background-color: red;
+        }
+        .item2{
+            position: absolute;
+            right: 30px;
+            bottom: 100px;
+            background-color: blue;
+        }
+        .item3{
+            position: fixed;
+            right: 100px;
+            top: 100px;
+            background-color: green;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포지션</title>
+</head>
+<body>
+    <div class="container">
+     <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+    </div>
+</body>
+</html>

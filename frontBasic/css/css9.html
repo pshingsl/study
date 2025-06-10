@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    img{
+        width: 100px;
+        height: 100px;
+    } 
+    .containeer{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+    }
+    .tr {
+        position: absolute;
+        transform: skewY(30deg);
+        transition: 1s;
+        cursor: pointer;
+      }
+
+      .tr:hover {
+        transform: skew(0);
+      }
+
+      .tr1 {
+        top: 180px;
+        left: 200px;
+        z-index: 3;
+      }
+
+      .tr2 {
+        top: 150px;
+        left: 350px;
+        z-index: 2;
+      }
+
+      .tr2:hover {
+        z-index: 3;
+      }
+
+      .tr3 {
+        top: 120px;
+        left: 500px;
+      }
+
+      .tr3:hover {
+        z-index: 3;
+      }
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화면 돌리기</title>
+</head>
+<body>
+    <div class="container">
+        <div class="tr tr1">
+            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F003%2F2024%2F09%2F22%2FNISI20240922_0020528856_web_20240922134209_20240922134324756.jpg&type=a340" alt="">
+        </div>
+        <div class="tr tr2">
+            <img src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fpreviews.123rf.com%2Fimages%2Fnattawatstocker%2Fnattawatstocker1601%2Fnattawatstocker160100015%2F50816277-%25ED%2595%2591%25ED%2581%25AC-%25ED%2595%2598%25EB%258A%2598.jpg&type=sc960_832" alt="">
+        </div>
+        <div class="tr tr3">
+            <img src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fimg.lovepik.com%2Fphoto%2F20211120%2Fmedium%2Flovepik-the-sky-in-the-city-is-not-the-sky-but-the-vast-picture_500403791.jpg&type=sc960_832" alt="">
+        </div>
+    </div>
+</body>
+</html>
