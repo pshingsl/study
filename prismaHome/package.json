@@ -1,7 +1,7 @@
 {
-  "name": "ex0609",
+  "name": "prismahome",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js"
@@ -10,13 +10,13 @@
   "author": "",
   "license": "ISC",
   "description": "",
+  "dependencies": {
+    "@prisma/client": "^6.9.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "prisma": "^6.9.0"
+  },
   "devDependencies": {
     "nodemon": "^3.1.10"
-  },
-  "dependencies": {
-    "dotenv": "^16.5.0",
-    "ejs": "^3.1.10",
-    "express": "^5.1.0",
-    "mysql2": "^3.14.1"
   }
 }
