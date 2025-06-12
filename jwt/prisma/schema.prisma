@@ -1,0 +1,46 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// User 모델 정의
+model Users { 
+  userId    Int      @id @default(autoincrement()) @map("userId")
+  email     String   @unique @map("email")
+  password  String   @map("password")
+  nickname  String   @map("nickname")
+  createdAt DateTime @default(now()) @map("createdAt")
+  updatedAt DateTime @updatedAt @map("updatedAt")
+
+  Posts     Post[] 
+
+  @@map("Users") 
+}
+
+// Post 모델 정의
+model Post {
+  postId    Int      @id @default(autoincrement()) @map("postId")
+  userId    Int      @map("userId") 
+  title     String   @map("title")
+  content   String   @map("content") @db.Text
+  createdAt DateTime @default(now()) @map("createdAt")
+  updatedAt DateTime @updatedAt @map("updatedAt")
+
+  User      Users    @relation(fields: [userId], references: [userId])
+
+  @@map("Posts")
+
+}
+
+// @id 해당 필드를 해당 모델의 기본 키로 지정
+// @default(autoincrement()) 자동으로 증가하는 값으로 초기화 되도록 한다 
+// @map("field name") 데이터 베이스에서 해당 필드의 이름들 지정된 값으로 매핑
+// @unique 해당 필드가 고유한 값을 가져와야 한다는 것을 나타낸다
+// @db.text 데이터베이스에 해당 필드를 텍스트 형식으로 저장한다.
+// @updatedAt 업데이트가 발생 할 때마다 자동으로 갱신되도록 한다.
+// @@map("") 데이터베이스에서 이 모델을 해당 이름으로 매핑
+// 매핑: 데이터베이스에 연결하낟,
