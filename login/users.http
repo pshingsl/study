@@ -1,0 +1,27 @@
+### 회원가입 
+POST http://localhost:3000/sign-up
+Content-Type: application/json
+
+{
+  "email": "w1455ok@naver.com",
+  "password": "12345678",
+  "name": "Hasd"
+}
+
+### 3시수업 로그인하기
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email": "w1455ok@naver.com",
+  "password": "12345678"
+}
+
+
+###
+GET http://localhost:3000/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc0OTc5OTA5NywiZXhwIjoxNzQ5ODQyMjk3fQ.GjZ_qxqfo1SBo3cGuom3iphAsMJPcxFtGmzVGDmUiaU
+
+###
+GET http://localhost:3000/login
+ 
