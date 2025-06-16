@@ -1,0 +1,38 @@
+ @jwt = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsImlhdCI6MTc0OTgwNTU5NCwiZXhwIjoxNzQ5ODQ4Nzk0fQ.Hx0hOzujgBl1LMh64Pw_xUHd1Bj9NkL9n5egLl0YoCU
+
+###
+// 게시글 생성
+
+POST http://localhost:3000/posts
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+  "title": "게시글2",
+  "content": "6월13일 실습 중입니다."
+}
+
+###
+// 2특정 게시글 조회
+GET http://localhost:3000/posts/4
+
+
+###
+// 3. 전체 게시글 조회
+GET http://localhost:3000/posts
+
+###
+//수정
+PUT http://localhost:3000/posts/2
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+  "title": "게시글2.1",
+  "content": "6월13일 실습 입니다."
+}
+
+###
+//삭제
+DELETE http://localhost:3000/posts/1
+Authorization: Bearer {{jwt}}

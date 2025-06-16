@@ -1,0 +1,52 @@
+@jwt = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc1MDA3NTQyMywiZXhwIjoxNzUwMTE4NjIzfQ.n2XCPfhQ09xZ8Ixbqhdvz0kjof0fVtmD3u1_x6m9Cpo
+
+### 6월16일 회원가입 
+POST http://localhost:3000/sign-up
+Content-Type: application/json
+
+{
+  "email": "wk118ok@naver.com",
+  "password": "12345678",
+  "name": "Hasd"
+}
+
+### 6/16로그인
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email": "wk118ok@naver.com",
+  "password": "12345678"
+}
+
+###
+POST http://localhost:3000/posts
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+  "title": "게시글3",
+  "content": "6월13일 실습 중입니다."
+}
+
+###
+GET  http://localhost:3000/posts/1
+
+###
+GET  http://localhost:3000/posts
+
+###
+//수정
+PUT http://localhost:3000/posts/1
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+  "title": "게시글2.1",
+  "content": "6월19일 실습 입니다."
+}
+
+###
+//삭제
+DELETE http://localhost:3000/posts/1
+Authorization: Bearer {{jwt}}
